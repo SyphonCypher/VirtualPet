@@ -8,14 +8,11 @@ namespace VirtualPet
 {
     class VirtualPet
     {
-
-
-
         //Fields
-        private int hunger;
-        private int thirst;
-        private int boredom;
-        private int fatigue;
+        private int hunger = 5;
+        private int thirst = 5;
+        private int boredom = 5;
+        private int fatigue = 5;
 
         //Properties
         public int GetHunger
@@ -88,11 +85,20 @@ namespace VirtualPet
 
         public void Tick()
         {
+            Console.WriteLine("Shoober the Shiba Inu");
+            Console.WriteLine("Hunger: " + GetHunger);
+            Console.WriteLine("Thirst: " + GetThirst);
+            Console.WriteLine("Boredom: " + GetBoredom);
+            Console.WriteLine("Fatigue: " + GetFatigue);
+            Console.WriteLine(" ");
+
             GetHunger = GetHunger++;
             GetThirst = GetThirst++;
             GetBoredom = GetBoredom++;
             GetFatigue = GetFatigue++;
             string input = Console.ReadLine().ToLower();
+
+
 
             if (GetHunger >= 8)
             {

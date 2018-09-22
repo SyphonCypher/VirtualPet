@@ -28,26 +28,31 @@ namespace VirtualPet
                 Console.WriteLine("Type \"Play\" to play with Shoober.");
                 Console.WriteLine("Type \"Rest\" to tuck Shoober into bed.");
                 Console.ReadLine().ToLower();
+                
+
+                string input = Console.ReadLine().ToLower(); 
+
+                if (input == "feed")
+                {
+                    virtualPet.GetFood();
+                }
+                else if (input == "water")
+                {
+                    virtualPet.GetWater();
+                }
+                else if (input == "play")
+                {
+                    virtualPet.GetPlay();
+                }
+                else if (input == "rest")
+                {
+                    virtualPet.GetRest();
+                }
+                else
+                {
+
+                }
                 virtualPet.Tick();
-
-                //string input = Console.ReadLine().ToLower();
-
-                //if (input == "feed")
-                //{
-                //    virtualPet.GetFood();
-                //}
-                //else if (input == "water")
-                //{
-                //    virtualPet.GetWater();
-                //}
-                //else if (input == "play")
-                //{
-                //    virtualPet.GetPlay();
-                //}
-                //else if (input == "rest")
-                //{
-                //    virtualPet.GetRest();
-                //}
 
             } while ((virtualPet.GetHunger <= 10) && (virtualPet.GetThirst <= 10));
         }
