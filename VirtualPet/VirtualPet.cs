@@ -83,7 +83,7 @@ namespace VirtualPet
             GetBoredom++;
         }
 
-        public void Tick()
+        public void Tick(string input)
         {
             Console.WriteLine("Shoober the Shiba Inu");
             Console.WriteLine("Hunger: " + GetHunger);
@@ -96,7 +96,7 @@ namespace VirtualPet
             GetThirst = GetThirst++;
             GetBoredom = GetBoredom++;
             GetFatigue = GetFatigue++;
-            string input = Console.ReadLine().ToLower();
+            //string input;
 
 
 

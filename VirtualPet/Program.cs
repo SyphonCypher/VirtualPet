@@ -27,7 +27,7 @@ namespace VirtualPet
                 Console.WriteLine("Type \"Water\" to give Shoober water.");
                 Console.WriteLine("Type \"Play\" to play with Shoober.");
                 Console.WriteLine("Type \"Rest\" to tuck Shoober into bed.");
-                Console.ReadLine().ToLower();
+                //Console.ReadLine().ToLower();
                 
 
                 string input = Console.ReadLine().ToLower(); 
@@ -52,7 +52,7 @@ namespace VirtualPet
                 {
 
                 }
-                virtualPet.Tick();
+                virtualPet.Tick(input);
 
             } while ((virtualPet.GetHunger <= 10) && (virtualPet.GetThirst <= 10));
         }
